@@ -21,7 +21,7 @@ function share(key) {
     console.log('LOCAL', db.local.key.toString('hex'))
 
     sw.on('connection', (peer) => {
-     console.log('Sharing...')
+      db.on('sync', () => console.log('Synced'))
     })
 	})
 }
