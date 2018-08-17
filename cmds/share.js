@@ -17,12 +17,11 @@ function share(key) {
 
 	db.ready(() => {
 		const sw = swarm(db)
-		console.log(db.key.toString('hex'))
-    console.log(db.local.key.toString('hex'))
+		console.log('KEY', db.key.toString('hex'))
+    console.log('LOCAL', db.local.key.toString('hex'))
 
     sw.on('connection', (peer) => {
-      console.log('Sharing...')
-      pump(peer, db.replicate({live: true}), peer)
+     console.log('Sharing...')
     })
 	})
 }

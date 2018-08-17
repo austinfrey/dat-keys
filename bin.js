@@ -15,6 +15,6 @@ cli.command('ls <key>').action(ls)
 
 cli.command('rm <key>').action(rm)
 
-cli.command('share').action(share)
+cli.command('share <key>').action(share)
 
 cli.parse(process.argv)

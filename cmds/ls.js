@@ -7,7 +7,7 @@ const db = hyperdb(keysDir, {valueEncoding: 'utf8'})
 
 function ls(key) {
 	db.ready(() => {
-    console.log(db.key.toString('hex'))
+  console.log(db.key.toString('hex'))
 
 		db.get(key, (err, nodes) => {
 			if (err || nodes.length === 0) {
