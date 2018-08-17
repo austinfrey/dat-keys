@@ -1,0 +1,46 @@
+{
+  "name": "@zigy/keys",
+  "version": "0.0.1",
+  "description": "A CLI tool for managing hypercore/hyperdb/hyperdrive/DAT keys",
+  "main": "bin.js",
+  "bin": {
+    "keys": "bin.js"
+  },
+  "scripts": {
+    "test": "xo --fix"
+  },
+  "keywords": [
+    "dat",
+    "hyperdrive",
+    "hyperdb",
+    "hypercore"
+  ],
+  "author": "Austin Frey",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.17.1",
+    "hyperdb": "^3.5.0"
+  },
+  "devDependencies": {
+    "random-access-memory": "^3.0.0",
+    "xo": "^0.22.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "rules": {
+      "no-undef": [
+        "warn",
+        {
+          "typeof": true
+        }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "object": true,
+          "array": false
+        }
+      ]
+    }
+  }
+}
