@@ -20,7 +20,9 @@
   "dependencies": {
     "commander": "^2.17.1",
     "dedent": "^0.7.0",
-    "hyperdb": "^3.5.0"
+    "hyperdb": "^3.5.0",
+    "hyperdiscovery": "^8.0.0",
+    "pump": "^3.0.0"
   },
   "devDependencies": {
     "random-access-memory": "^3.0.0",
