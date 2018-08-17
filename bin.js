@@ -1,8 +1,8 @@
 const cli = require('commander')
-const {add, ls, rm}= require('./cmds')
+const {add, ls, rm} = require('./cmds')
 
 cli.version(
-  require('./package.json').version
+	require('./package.json').version
 )
 
 cli.command('add <key> <dat-key>').action(add)

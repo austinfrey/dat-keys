@@ -1,5 +1,5 @@
 module.exports = {
-  add: require('./add'),
-  ls: require('./ls'),
-  rm: require('./rm')
+	add: require('./add'),
+	ls: require('./ls'),
+	rm: require('./rm')
 }
