@@ -21,6 +21,7 @@ function share(key) {
     console.log(db.local.key.toString('hex'))
 
     sw.on('connection', (peer) => {
+      console.log('Sharing...')
       pump(peer, db.replicate({live: true}), peer)
     })
 	})
