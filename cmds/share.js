@@ -18,6 +18,7 @@ function share(key) {
 	db.ready(() => {
 		const sw = swarm(db)
 		console.log(db.key.toString('hex'))
+    console.log(db.local.key.toString('hex'))
 
     sw.on('connection', (peer) => {
       pump(peer, db.replicate({live: true}), peer)
