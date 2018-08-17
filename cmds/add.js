@@ -1,9 +1,8 @@
 const path = require('path')
 const hyperdb = require('hyperdb')
-const {isValidKey} = require('./helpers.js')
+const {isValidKey, homeDir} = require('./helpers.js')
 
-const homeDir = process.env.HOME
-const keysDir = path.join(homeDir, '.keys')
+const keysDir = path.join(homeDir(), '.keys')
 const db = hyperdb(keysDir, {valueEncoding: 'utf8'})
 
 function add(key, datKey) {

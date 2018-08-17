@@ -1,11 +1,13 @@
 #! /usr/bin/env node
 
 const cli = require('commander')
-const {add, ls, rm} = require('./cmds')
+const {init, add, ls, rm} = require('./cmds')
 
 cli.version(
 	require('./package.json').version
 )
+
+cli.command('init <key>').action(init)
 
 cli.command('add <key> <dat-key>').action(add)
 
